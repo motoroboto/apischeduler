@@ -7,23 +7,21 @@ var presentHour = parseInt(moment().hour());
 currentDayEl.textContent = currentDay;
 currentTimeEl.textContent = currentTime;
 
+
 $("textarea").each(function(){
     var hourBlock = parseInt($(this).attr('class'));
     if (hourBlock < presentHour) {
         $(this).addClass("past");
-        $(this).append(localStorage.task[hourBlock]);
         var x = localStorage.getItem("task"+hourBlock)
         $(this).append(x);
     }
     if (hourBlock == presentHour) {
         $(this).addClass("present");
-        $(this).append(localStorage.task[hourBlock]);
         var x = localStorage.getItem("task"+hourBlock)
         $(this).append(x);
     }
     if (hourBlock > presentHour) {
         $(this).addClass("future");
-        $(this).append(localStorage.task[hourBlock]);
         var x = localStorage.getItem("task"+hourBlock)
         $(this).append(x);
     }
@@ -33,5 +31,5 @@ $("textarea").each(function(){
   $(".saveBtn").click(function(){
     var taskNum = parseInt(this.id);
     taskContent = $("body").find('#text-block'+ taskNum);
-    localStorage.setItem('task'+ taskNum, taskContent[0].value);   
+    localStorage.setItem('task'+ taskNum, taskContent[0].value);
 }); 
