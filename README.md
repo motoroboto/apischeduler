@@ -4,4 +4,4 @@ There is also a clear button so you can start your schedule over easily each day
 
 https://motoroboto.github.io/apischeduler/
 
-<img src="https://github.com/motoroboto/apischeduler/blob/master/assets/screenshot.png">
+<img src="https://github.com/motoroboto/apischeduler/blob/main/assets/screenshot.png">
